@@ -22,9 +22,9 @@ iit.assos.activ! 1-8
 epita.anciens! 1-45
 epitech.anciens! 1-19
 epitech.delegues! 1-15
-epita.delegues! 1-79
+epita.delegues! 1-79,99
 epitech.piscine! 1-4969
-iit.delation: 1-14979
+iit.delation: 1-14981
 iit.test! 1-11959,12093,12549,12590,12627
 iit.comp! 1-47
 iit.comp.lang! 1-82
@@ -59,7 +59,7 @@ iit.art.ascii! 1-278
 iit.art.bd! 1-38
 iit.art.manga! 1-73
 iit.art.comics! 1-4
-iit.talk.mylife: 1-2990
+iit.talk.mylife: 1-2999
 iit.test.bocal! 1-113
 iit.misc! 1-1065
 iit.assos.antre! 1-42
@@ -101,7 +101,7 @@ iit.comp.lang.java! 1-19
 iit.fans.keybee! 1-37
 epita.adm.isup! 1-887,889-890,901-912,915-917
 epita.adm.ispe! 1-834,844,846,848,850,853,855,860-861,863,865-868,870,872-874
-epita.adm.a1: 1-24699
+epita.adm.a1: 1-24700
 epita.adm.a2! 1-336,339-355
 epita.adm.a3! 1-342,345-347,349,353,356-367
 iit.comp.lang.sql! 1
@@ -198,12 +198,12 @@ epita.cours.maths! 1-97
 epita.cours.sql! 1-292
 epita.cours.c-unix.pre-rentree! 1-244,424
 epita.testbocal! 1
-epita.assistants: 1-549
-epita.cours.c-unix: 1-57
+epita.assistants: 1-576
+epita.cours.c-unix: 1-69
 epita.cours.c-unix.42sh!
-epita.cours.c-unix.mp! 1-2
-epita.cours.c-unix.piscine: 1-891
-epita.piscine: 1-98
+epita.cours.c-unix.mp! 1-2,426-429
+epita.cours.c-unix.piscine: 1-977
+epita.piscine: 1-112
 epita.cours.c++!
 epita.cours.c++.atelier!
 epita.cours.c++.corewar!

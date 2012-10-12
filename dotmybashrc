@@ -110,6 +110,7 @@ alias cl='clear'
 alias ping='ping -c 5'
 alias more='less'
 alias z='clear && zlock -immed'
+alias please='sudo'
 
 ##### tar aliases #####
 
@@ -443,10 +444,9 @@ _meta_comp()
         fi
 
     fi
-    
 }
 
 
 complete -o default -F _meta_comp nohup \
-eval exec trace truss strace sotruss gdb
+eval exec trace truss strace sotruss
 complete -o default -F _meta_comp command type which man nice time
