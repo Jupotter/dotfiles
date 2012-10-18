@@ -86,7 +86,7 @@ function m {
 }
 
 function silence {
-	$@ > /dev/null 2> nohup.out;
+	$@ > /dev/null 2>/dev/null;
 }
 
 function genpasswd() {
@@ -111,6 +111,9 @@ alias ping='ping -c 5'
 alias more='less'
 alias z='clear && zlock -immed'
 alias please='sudo'
+alias v='vim'
+
+alias pacman='yaourt'
 
 ##### tar aliases #####
 

@@ -11,7 +11,7 @@ epitech.adm.adm! 1-186
 epita! 1-6
 epita.general: 1-815
 epita.adm: 1-49
-epita.adm.adm: 1-159
+epita.adm.adm: 1-160
 iit.assos.bde! 1-217
 iit.assos.eptv! 1-52
 iit.assos.unisson! 1-31
@@ -99,11 +99,11 @@ epitech.international.chine! 1-16
 iit.comp.lang.caml! 1-23
 iit.comp.lang.java! 1-19
 iit.fans.keybee! 1-37
-epita.adm.isup! 1-887,889-890,901-912,915-917
-epita.adm.ispe! 1-834,844,846,848,850,853,855,860-861,863,865-868,870,872-874
-epita.adm.a1: 1-24700
-epita.adm.a2! 1-336,339-355
-epita.adm.a3! 1-342,345-347,349,353,356-367
+epita.adm.isup! 1-887,889-890,901-912,915-917,920
+epita.adm.ispe! 1-834,844,846,848,850,853,855,860-861,863,865-868,870,872-874,880
+epita.adm.a1: 1-24701
+epita.adm.a2! 1-336,339-355,357
+epita.adm.a3! 1-342,345-347,349,353,356-367,369
 iit.comp.lang.sql! 1
 iit.comp.emacs! 1-65
 iit.assos.overnoise! 1-9
@@ -198,10 +198,10 @@ epita.cours.maths! 1-97
 epita.cours.sql! 1-292
 epita.cours.c-unix.pre-rentree! 1-244,424
 epita.testbocal! 1
-epita.assistants: 1-579
-epita.cours.c-unix: 1-86,88-90
+epita.assistants: 1-583
+epita.cours.c-unix: 1-102
 epita.cours.c-unix.42sh!
-epita.cours.c-unix.mp! 1-2,426-429,440-441
+epita.cours.c-unix.mp! 1-2,426-429,440-442,444-445
 epita.cours.c-unix.piscine: 1-977
 epita.piscine: 1-112
 epita.cours.c++!
