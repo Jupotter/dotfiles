@@ -7,3 +7,6 @@
 [submodule "vimplugin/syntastic"]
 	path = vimplugin/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "vimplugin/powerline"]
+	path = vimplugin/powerline
+	url = git://github.com/Lokaltog/vim-powerline.git

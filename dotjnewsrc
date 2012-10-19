@@ -199,10 +199,10 @@ epita.cours.sql! 1-292
 epita.cours.c-unix.pre-rentree! 1-244,424
 epita.testbocal! 1
 epita.assistants: 1-583
-epita.cours.c-unix: 1-102
+epita.cours.c-unix: 1-107
 epita.cours.c-unix.42sh!
 epita.cours.c-unix.mp! 1-2,426-429,440-442,444-445
-epita.cours.c-unix.piscine: 1-977
+epita.cours.c-unix.piscine: 1-979
 epita.piscine: 1-112
 epita.cours.c++!
 epita.cours.c++.atelier!
