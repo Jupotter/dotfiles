@@ -5,6 +5,8 @@ endif
 
 set nocompatible
 
+set t_Co=256
+
 nnoremap ; :
 
 call pathogen#infect()
@@ -21,12 +23,12 @@ highlight CursorLine cterm=bold ctermbg=DarkGrey
 
 set laststatus=2
 
-set statusline=%t
-set statusline+=%(\ [%M%R%Y]%)
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
+" set statusline=%t
+" set statusline+=%(\ [%M%R%Y]%)
+" set statusline+=%=      "left/right separator
+" set statusline+=%c,     "cursor column
+" set statusline+=%l/%L   "cursor line/total lines
+" set statusline+=\ %P    "percent through file
 
 set wildmenu
 set wildmode=full
@@ -98,5 +100,7 @@ let g:syntastic_c_check_header=1
 let g:syntastic_cpp_check_header=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_sign=1
+
+let g:Powerline_symbols = 'fancy'
 
 set shell=/bin/bash
