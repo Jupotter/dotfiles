@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/jupotter/Desktop'
-let g:netrw_dirhist_2='/home/jupotter/.config/awesome'
-let g:netrw_dirhist_3='/home/jupotter/Desktop/fmodapi44004linux64/examples/media'
-let g:netrw_dirhist_4='/home/jupotter/Projects/sterone/src/svmonitor'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/garagn_j/piscine/j05'
+let g:netrw_dirhist_2='/home/garagn_j/piscine/j05/garagn_j'
+let g:netrw_dirhist_3='/home/garagn_j/piscine/j05/garagn_j/src'
+let g:netrw_dirhist_4='/home/garagn_j/piscine/j05/garagn_j/src/my_string'
+let g:netrw_dirhist_5='/home/garagn_j/.git_template/hooks'
