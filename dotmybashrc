@@ -111,6 +111,7 @@ alias ping='ping -c 5'
 alias more='less'
 alias z='clear && zlock -immed'
 alias please='sudo'
+alias #='sudo'
 alias v='vim'
 alias tmux='tmux -2'
 
