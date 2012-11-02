@@ -64,6 +64,8 @@ export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
 export LESS='-i -w -J -z-4 -g -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
 
+export PAGER=vimpager
+
 export NNTPSERVER='news.epita.fr'
 
 export CFLAGS='-Wextra -Wall -Werror -std=c99 -pedantic'
@@ -138,6 +140,10 @@ alias treel='m tree -Csup'
 function mkcd {
 	mkdir $1 && cd $1
 }
+
+if [ `uname -n` = "jupotter-laptop" ] ; then
+    pacman -Qu
+fi
 
 function firefox() { command firefox "$@" & }
 function xpdf() { command xpdf "$@" & }
@@ -454,3 +460,5 @@ _meta_comp()
 complete -o default -F _meta_comp nohup \
 eval exec trace truss strace sotruss
 complete -o default -F _meta_comp command type which man nice time
+
+set -o vi

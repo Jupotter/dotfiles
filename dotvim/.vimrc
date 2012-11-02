@@ -23,16 +23,15 @@ highlight CursorLine cterm=bold ctermbg=Black
 
 set laststatus=2
 
-set statusline=%t
-set statusline+=%(\ [%M%R%Y]%)
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
+" set statusline=%t
+" set statusline+=%(\ [%M%R%Y]%)
+" set statusline+=%=      "left/right separator
+" set statusline+=%c,     "cursor column
+" set statusline+=%l/%L   "cursor line/total lines
+" set statusline+=\ %P    "percent through file
 
 set wildmenu
 set wildmode=full
-set colorcolumn=+1
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
 set ignorecase		" Do case insensitive matching
@@ -68,8 +67,8 @@ set scrolloff=10
 set list
 set listchars=tab:>⋅,trail:⋅,eol:¬,nbsp:⋅
 
-nnoremap j gj
-nnoremap k gk
+nnoremap <silent> j gj
+nnoremap <silent> k gk
 
 inoremap <UP> <nop>
 inoremap <DOWN> <nop>
@@ -79,6 +78,8 @@ nnoremap <UP> <nop>
 nnoremap <DOWN> <nop>
 nnoremap <LEFT> <nop>
 nnoremap <RIGHT> <nop>
+
+cnoremap help vert help
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 

@@ -110,8 +110,8 @@ iit.assos.overnoise! 1-9
 iit.comp.securite! 1-204
 epitech.exterieur.programmation! 1-2
 iit.misc.objets! 1-3
-iit.misc.objets.trouves: 1-508
-iit.misc.objets.perdus: 1-290
+iit.misc.objets.trouves: 1-510
+iit.misc.objets.perdus: 1-291
 iit.labos.lse! 1-24
 iit.adm.msdnaa!
 iit.labos! 1-8
@@ -198,12 +198,12 @@ epita.cours.maths! 1-97
 epita.cours.sql! 1-292
 epita.cours.c-unix.pre-rentree! 1-244,424
 epita.testbocal! 1
-epita.assistants: 1-585
-epita.cours.c-unix: 1-109
+epita.assistants: 1-600
+epita.cours.c-unix: 1-121
 epita.cours.c-unix.42sh!
-epita.cours.c-unix.mp! 1-2,426-429,440-442,444-445,456
+epita.cours.c-unix.mp: 1-558
 epita.cours.c-unix.piscine: 1-980
-epita.piscine: 1-112
+epita.piscine: 1-115
 epita.cours.c++!
 epita.cours.c++.atelier!
 epita.cours.c++.corewar!
