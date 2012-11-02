@@ -47,6 +47,7 @@ set ruler
 set showmode
 set relativenumber
 set smarttab
+set timeoutlen=0
 
 set tabstop=8
 set shiftwidth=4
@@ -62,7 +63,7 @@ set smartindent
 set wrap
 set cursorline
 set magic
-set scrolloff=99
+set scrolloff=10
 
 set list
 set listchars=tab:>⋅,trail:⋅,eol:¬,nbsp:⋅
@@ -96,8 +97,9 @@ nnoremap <C-k> :call NumberToggle()<cr>
 
 autocmd vimenter * if !argc() | NERDTree | endif
 
-let g:syntastic_c_check_header=1
-let g:syntastic_cpp_check_header=1
+let g:syntastic_auto_loc_list=1
+"let g:syntastic_c_check_header=1
+"let g:syntastic_cpp_check_header=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_sign=1
 
