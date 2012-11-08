@@ -9,7 +9,7 @@ epitech.general! 1-2590
 epitech.adm! 1-229
 epitech.adm.adm! 1-186
 epita! 1-6
-epita.general: 1-815
+epita.general: 1-816
 epita.adm: 1-49
 epita.adm.adm: 1-160
 iit.assos.bde! 1-217
@@ -198,10 +198,10 @@ epita.cours.maths! 1-97
 epita.cours.sql! 1-292
 epita.cours.c-unix.pre-rentree! 1-244,424
 epita.testbocal! 1
-epita.assistants: 1-603
-epita.cours.c-unix: 1-123
-epita.cours.c-unix.42sh!
-epita.cours.c-unix.mp: 1-579
+epita.assistants: 1-612
+epita.cours.c-unix: 1-126
+epita.cours.c-unix.42sh: 1-107,109-111
+epita.cours.c-unix.mp: 1-581
 epita.cours.c-unix.piscine: 1-980
 epita.piscine: 1-115
 epita.cours.c++!

@@ -19,7 +19,9 @@ filetype plugin indent on
 
 set autoread
 set background=dark
-highlight CursorLine cterm=bold ctermbg=Black
+highlight CursorLine cterm=bold ctermbg=None
+
+highlight Folded cterm=None ctermfg=White ctermbg=None
 
 set laststatus=2
 
@@ -63,9 +65,6 @@ set wrap
 set cursorline
 set magic
 set scrolloff=10
-
-set list
-set listchars=tab:>⋅,trail:⋅,eol:¬,nbsp:⋅
 
 nnoremap <silent> j gj
 nnoremap <silent> k gk
