@@ -180,6 +180,12 @@ complete -A job -P '%'     fg jobs disown
 complete -A directory  mkdir rmdir
 complete -A directory   -o default cd
 
+# Code
+complete -f -o default -X '!*.c'          gcc vim
+complete -f -o default -X '!*.o'          gcc
+complete -f -o default -X '!*.sh'         vim sh bash
+complete -f -o default -X '!Makefile*'    make vim
+
 # Compression
 complete -f -o default -X '*.+(zip|ZIP)'  zip
 complete -f -o default -X '!*.+(zip|ZIP)' unzip
@@ -190,7 +196,7 @@ complete -f -o default -X '!*.+(gz|GZ)'   gunzip
 complete -f -o default -X '*.+(bz2|BZ2)'  bzip2
 complete -f -o default -X '!*.+(bz2|BZ2)' bunzip2
 complete -f -o default -X '!*.+(zip|ZIP|z|Z|gz|GZ|bz2|BZ2)' extract
-complete -f -o default -X '!*.+(xz|XZ)'		pacman
+complete -f -o default -X '!*.+(xz|XZ)'   pacman
 
 
 # Documents - Postscript,pdf,dvi.....
