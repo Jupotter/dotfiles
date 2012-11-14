@@ -99,6 +99,8 @@ nnoremap <C-k> :call NumberToggle()<cr>
 autocmd vimenter * if !argc() | NERDTree | endif
 
 let g:syntastic_auto_loc_list=1
+"let g:syntastic_c_no_include_search = 1
+let g:syntastic_c_compiler_options = ' -W -Wall -Werrors -Wextra -std=c99 -pedantic'
 "let g:syntastic_c_check_header=1
 "let g:syntastic_cpp_check_header=1
 let g:syntastic_check_on_open=1

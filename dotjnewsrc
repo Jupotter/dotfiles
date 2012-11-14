@@ -198,10 +198,10 @@ epita.cours.maths! 1-97
 epita.cours.sql! 1-292
 epita.cours.c-unix.pre-rentree! 1-244,424
 epita.testbocal! 1
-epita.assistants: 1-612
+epita.assistants: 1-615
 epita.cours.c-unix: 1-126
-epita.cours.c-unix.42sh: 1-114
-epita.cours.c-unix.mp: 1-581
+epita.cours.c-unix.42sh: 1-125
+epita.cours.c-unix.mp: 1-582
 epita.cours.c-unix.piscine: 1-980
 epita.piscine: 1-115
 epita.cours.c++!
