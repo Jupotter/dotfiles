@@ -64,7 +64,10 @@ export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
 export LESS='-i -w -J -z-4 -g -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
 
-export PAGER=vimpager
+if command -v vimpager >/dev/null 2>&1; then
+    export PAGER=vimpager
+    alias less=vimpager
+fi
 
 export NNTPSERVER='news.epita.fr'
 
@@ -99,6 +102,15 @@ function genpasswd() {
 
 
 PS1="\[$bldgrn\]\u@\H\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]$ "
+
+source ~/dotfiles/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE='enable'
+GIT_PS1_SHOWUNTRACKEDFILES='enable'
+PS1="\n\[$bldwht\]\
+\342\224\214(\[$bldblu\]\w\[$bldwht\])\
+\342\224\200(\[$bldred\]\$?\[$bldwht\])\
+\$(__git_ps1 \"\342\224\200(\[$bldblu\]%s\[$bldwht\])\")\n\
+\342\224\224\342\224\200(\[$bldgrn\]\u\[$bldwht\])\342\224\200\$\[$txtrst\] "
 
 alias AUTHORS="echo '* garagn_j' > AUTHORS"
 alias cd..='cd ..'
