@@ -110,7 +110,9 @@ PS1="\n\[$bldwht\]\
 \342\224\214(\[$bldblu\]\w\[$bldwht\])\
 \342\224\200(\[$bldred\]\$?\[$bldwht\])\
 \$(__git_ps1 \"\342\224\200(\[$bldblu\]%s\[$bldwht\])\")\n\
-\342\224\224\342\224\200(\[$bldgrn\]\u\[$bldwht\])\342\224\200\$\[$txtrst\] "
+\342\224\224\342\224\200(\[$bldgrn\]\u\[$bldwht\])\342\224\200\$\[$txtrst\] \
+\[\$([ -n \"$TMUX\" ] && tmux setenv TMUXPWD_\$(tmux display -p \"#I_#P\") \
+\"\$PWD\")\]"
 
 alias AUTHORS="echo '* garagn_j' > AUTHORS"
 alias cd..='cd ..'
