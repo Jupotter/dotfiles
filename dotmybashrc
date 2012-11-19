@@ -197,10 +197,9 @@ complete -A directory  mkdir rmdir
 complete -A directory   -o default cd
 
 # Code
-complete -f -o default -X '!*.c'          gcc vim
-complete -f -o default -X '!*.o'          gcc
-complete -f -o default -X '!*.sh'         vim sh bash
-complete -f -o default -X '!Makefile*'    make vim
+complete -f -o default -X '!*.+(o|c|a|so)'  gcc
+complete -f -o default -X '!*.sh'           sh bash
+complete -f -o default -X '!Makefile*'      make
 
 # Compression
 complete -f -o default -X '*.+(zip|ZIP)'  zip
