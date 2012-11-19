@@ -24,6 +24,13 @@ highlight CursorLine cterm=bold ctermbg=None
 
 highlight Folded cterm=None ctermfg=White ctermbg=None
 
+highlight Pmenu cterm=None ctermfg=White ctermbg=Magenta
+
+" highlight DiffAdd cterm=Bold ctermfg=Blue ctermbg=Black
+" highlight DiffChange cterm=Bold ctermfg=Magenta ctermbg=Black
+" highlight DiffDelete cterm=Bold ctermfg=Cyan ctermbg=Black
+" highlight DiffText cterm=Bold ctermfg=Red ctermbg=Black
+
 set laststatus=2
 
 " set statusline=%t
