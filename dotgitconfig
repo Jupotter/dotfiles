@@ -12,7 +12,7 @@
 [merge]
 	tool = diffconflicts
 [mergetool "diffconflicts"]
-	path = /home/jupotter/.vim/scripts/diffconflicts
+	path = $HOME/.vim/scripts/diffconflicts
 	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
 	trustExitCode = true
 	keepBackup = false
