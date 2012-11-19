@@ -1,0 +1,18 @@
+[user]
+	email = jupotter.g@gmail.com
+	name = Jupotter
+[push]
+	default = simple
+[color]
+	ui = auto
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	path = /home/jupotter/.vim/scripts/diffconflicts
+	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false
