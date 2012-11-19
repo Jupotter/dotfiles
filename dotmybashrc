@@ -101,18 +101,34 @@ function genpasswd() {
 }
 
 
-PS1="\[$bldgrn\]\u@\H\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]$ "
-
 source ~/dotfiles/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE='enable'
 GIT_PS1_SHOWUNTRACKEDFILES='enable'
+
+
+function prompt(){
+case $1 in
+    light | 0)
+PS1="\[$bldgrn\]\u@\H\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]$ ";;
+    classic | 1)
 PS1="\n\[$bldwht\]\
 \342\224\214(\[$bldblu\]\w\[$bldwht\])\
 \342\224\200(\[$bldred\]\$?\[$bldwht\])\
 \$(__git_ps1 \"\342\224\200(\[$bldblu\]%s\[$bldwht\])\")\n\
-\342\224\224\342\224\200(\[$bldgrn\]\u\[$bldwht\])\342\224\200\$\[$txtrst\] \
+\342\224\224\342\224\200(\[$bldgrn\]\u\[$bldwht\])\342\224\200\$\[$txtrst\] ";;
+    power | 2)
+PS1="\n\
+\[\e[1;42;37m\] \u \[\e[0;44;32m\342\256\200\]\
+\[\e[1;44;37m\] \w \[\e[0;41;34m\342\256\200\]\
+\[\e[1;41;37m\] \$? \[\e[0m\e[31m\342\256\200\]\n\
+$bldwht $ $txtrst";;
+esac
+PS1="$PS1\
 \[\$([ -n \"$TMUX\" ] && tmux setenv TMUXPWD_\$(tmux display -p \"#I_#P\") \
 \"\$PWD\")\]"
+}
+
+prompt classic
 
 alias AUTHORS="echo '* garagn_j' > AUTHORS"
 alias cd..='cd ..'
