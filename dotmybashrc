@@ -105,6 +105,19 @@ source ~/dotfiles/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE='enable'
 GIT_PS1_SHOWUNTRACKEDFILES='enable'
 
+color(){
+    echo "\\e[38;5;$1m\\e[48;5;$2m"
+}
+
+prompt_powerline_status(){
+    if [ $1 -eq 0 ]; then
+        echo -e "\\e[0m\\e[38;5;$2m\0342\0256\0200"
+    else
+        echo -e "$(color $2 124)\0342\0256\0200\
+$(color 255 124) $1 \\e[0m\\e[38;5;124m\0342\0256\0200"
+    fi
+}
+
 
 function prompt(){
 case $1 in
@@ -118,9 +131,9 @@ PS1="\n\[$bldwht\]\
 \342\224\224\342\224\200(\[$bldgrn\]\u\[$bldwht\])\342\224\200\$\[$txtrst\] ";;
     power | 2)
 PS1="\n\
-\[\e[1;42;37m\] \u \[\e[0;44;32m\342\256\200\]\
-\[\e[1;44;37m\] \w \[\e[0;41;34m\342\256\200\]\
-\[\e[1;41;37m\] \$? \[\e[0m\e[31m\342\256\200\]\n\
+$(color 0 112) \u $(color 112 27)\342\256\200\]\
+$(color 255 27) \w \
+\$(prompt_powerline_status \$? 27)\n\
 $bldwht $ $txtrst";;
 esac
 PS1="$PS1\
@@ -128,7 +141,7 @@ PS1="$PS1\
 \"\$PWD\")\]"
 }
 
-prompt classic
+prompt power
 
 alias AUTHORS="echo '* garagn_j' > AUTHORS"
 alias cd..='cd ..'

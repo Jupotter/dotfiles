@@ -18,3 +18,5 @@
 	keepBackup = false
 [init]
 	templatedir = ~/.git_template
+[help]
+	autocorrect = 1
