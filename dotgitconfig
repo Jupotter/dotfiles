@@ -16,3 +16,5 @@
 	cmd = diffconflicts vim $BASE $LOCAL $REMOTE $MERGED
 	trustExitCode = true
 	keepBackup = false
+[init]
+	templatedir = ~/.git_template
