@@ -131,10 +131,10 @@ PS1="\n\[$bldwht\]\
 \342\224\224\342\224\200(\[$bldgrn\]\u\[$bldwht\])\342\224\200\$\[$txtrst\] ";;
     power | 2)
 PS1="\n\
-$(color 0 112) \u $(color 112 27)\342\256\200\]\
-$(color 255 27) \w \
-\$(prompt_powerline_status \$? 27)\n\
-$bldwht $ $txtrst";;
+\[$(color 0 112) \u $(color 112 27)\342\256\200\
+\[$(color 255 27) \w \
+\$(prompt_powerline_status \$? 27)\]\n\
+\[$bldwht\] $ \[$txtrst\]";;
 esac
 PS1="$PS1\
 \[\$([ -n \"$TMUX\" ] && tmux setenv TMUXPWD_\$(tmux display -p \"#I_#P\") \
