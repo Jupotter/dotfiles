@@ -16,3 +16,6 @@
 [submodule "tmux-powerline"]
 	path = tmux-powerline
 	url = git@github.com:Jupotter/tmux-powerline.git
+[submodule "dotvim/bundle/vim-omnicppcomplete"]
+	path = dotvim/bundle/vim-omnicppcomplete
+	url = git://github.com/yandy/vim-omnicppcomplete.git
