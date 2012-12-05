@@ -16,11 +16,11 @@ if(exists("*CreateClass") == 0)
         if(exists("*Headers") != 0)
             call Headers()
         endif
-        call cursor(3, 0)
+        call cursor(4, 0)
         execute "normal! iclass " . className
         execute "normal! o{"
         execute "normal! o};"
-        execute "normal! ko        "
+        execute "normal! ko    "
     endfunc
 endif
 
