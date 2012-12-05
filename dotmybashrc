@@ -7,8 +7,6 @@
 
 shopt -s histappend
 
-ulimit -c unlimited
-
 txtblk='\e[0;30m' # Black - Regular
 txtred='\e[0;31m' # Red
 txtgrn='\e[0;32m' # Green
@@ -74,6 +72,8 @@ fi
 export NNTPSERVER='news.epita.fr'
 
 export CFLAGS='-Wextra -Wall -Werror -std=c99 -pedantic'
+
+export CPPFLAGS='-Wextra -Wall -Werror'
 
 export SCFLAGS='-Wall -Wextra -std=c99 -pedantic \
 -Wfloat-equal -Wundef -Wshadow -Wpointer-arith \
@@ -166,6 +166,8 @@ alias v='vim'
 alias tmux='tmux -2'
 alias q='exit'
 alias e='vim'
+
+alias stc='/u/all/acu/public/stc'
 
 alias pacman='yaourt'
 
