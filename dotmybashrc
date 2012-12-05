@@ -121,6 +121,7 @@ $(color 255 160) $1 \\e[0m\\e[38;5;160m\0342\0256\0200"
 }
 
 function prompt_command(){
+ret=$?
 [ -n "$TMUX" ] &&
     tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD"
 }
@@ -140,7 +141,7 @@ PS1="\n\[$bldwht\]\
 PS1="\n\
 \[$(color 0 148) \u $(color 148 240)\342\256\200\
 \[\e[1;37m$(color 231 240) \w\e[0m$(color 231 240) \
-\$(prompt_powerline_status \$? 240)\]\n\
+\$(prompt_powerline_status \$ret 240)\]\n\
 \[$bldwht\] \$ \[$txtrst\]"
 ;;
 esac
