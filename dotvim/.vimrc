@@ -54,7 +54,7 @@ set incsearch		" Incremental search
 set gdefault
 set autowrite
 set hidden              " Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes)
+set mouse=a             " Enable mouse usage (all modes)
 set ruler
 set showmode
 set relativenumber
@@ -90,7 +90,7 @@ nnoremap <DOWN> <nop>
 nnoremap <LEFT> <nop>
 nnoremap <RIGHT> <nop>
 
-cnoremap help vert help
+cnoremap vhelp vert help
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 
