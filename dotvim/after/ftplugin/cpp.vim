@@ -24,4 +24,4 @@ if(exists("*CreateClass") == 0)
     endfunc
 endif
 
-nnoremap <C-F11> :call CreateClass()<cr>
+command! -b CreateClass call CreateClass()

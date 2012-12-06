@@ -35,5 +35,4 @@ if(exists("*Headers") == 0)
     endfunction
 endif
 
-nnoremap <C-F12> :call Headers()<cr>
-
+command! -b Headers call Headers()
