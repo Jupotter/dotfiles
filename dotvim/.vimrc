@@ -134,6 +134,6 @@ let g:syntastic_enable_sign=1
 let g:Powerline_symbols = 'fancy'
 call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
-let OmniCpp_ShowPrototypeInAbbr = 1
+"let OmniCpp_ShowPrototypeInAbbr = 1
 
 set shell=/bin/bash

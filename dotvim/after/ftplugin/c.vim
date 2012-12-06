@@ -7,6 +7,8 @@ set foldlevelstart=99
 set foldmethod=syntax
 set foldnestmax=1
 
+set cindent
+
 if(exists("*SplitHeader") == 0)
     function SplitHeader()
         if(match(expand("%"), "\\.h") == -1)
