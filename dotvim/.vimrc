@@ -24,6 +24,9 @@ highlight CursorLine cterm=bold ctermbg=None
 
 highlight Folded cterm=None ctermfg=White ctermbg=None
 
+highlight FoldColumn cterm=none ctermfg=Grey ctermbg=None
+set foldcolumn=1
+
 highlight Pmenu cterm=None ctermfg=White ctermbg=Magenta
 
 " highlight DiffAdd cterm=Bold ctermfg=Blue ctermbg=Black
