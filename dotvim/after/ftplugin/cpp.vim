@@ -1,3 +1,6 @@
+set foldnestmax=2
+set foldlevelstart=1
+
 if(exists("*SplitHeaderPP") == 0)
     function SplitHeaderPP()
         if(match(expand("%"), "\\.hh") == -1)

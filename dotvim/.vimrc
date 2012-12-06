@@ -22,9 +22,13 @@ set autoread
 set background=dark
 highlight CursorLine cterm=bold ctermbg=None
 
-highlight Folded cterm=None ctermfg=White ctermbg=None
+highlight Folded cterm=None ctermfg=White ctermbg=none
 
 highlight Pmenu cterm=None ctermfg=White ctermbg=Magenta
+
+set foldcolumn=1
+
+highlight foldcolumn cterm=None ctermfg=White ctermbg=none
 
 " highlight DiffAdd cterm=Bold ctermfg=Blue ctermbg=Black
 " highlight DiffChange cterm=Bold ctermfg=Magenta ctermbg=Black
@@ -42,12 +46,12 @@ set laststatus=2
 
 set wildmenu
 set wildmode=full
-set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
+set showcmd             " Show (partial) command in status line.
+set showmatch           " Show matching brackets.
+set ignorecase          " Do case insensitive matching
+set smartcase           " Do smart case matching
 set hlsearch
-set incsearch		" Incremental search
+set incsearch           " Incremental search
 set gdefault
 set autowrite
 set hidden              " Hide buffers when they are abandoned
@@ -75,6 +79,8 @@ set cursorline
 set magic
 set scrolloff=10
 
+set tags+=~/.vim/tags/stdlibcpp
+
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
@@ -86,6 +92,8 @@ nnoremap <UP> <nop>
 nnoremap <DOWN> <nop>
 nnoremap <LEFT> <nop>
 nnoremap <RIGHT> <nop>
+
+nnoremap <SPACE> <C-w>
 
 cnoremap vhelp vert help
 
@@ -137,3 +145,7 @@ call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 "let OmniCpp_ShowPrototypeInAbbr = 1
 
 set shell=/bin/bash
+
+source ~/.vim/autotags.vim
+
+" vim:ts=8:sts=4:sw=4:et
