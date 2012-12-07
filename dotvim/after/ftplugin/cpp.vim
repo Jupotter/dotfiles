@@ -15,7 +15,7 @@ nnoremap <C-h> :call SplitHeaderPP()<cr>
 
 if(exists("*CreateClass") == 0)
     function CreateClass()
-        let className = substitute(expand("%:t:r"), "\_\\(.\\)", "\\u\\1", "g")
+        let className = substitute(expand("%:t:r"), "\[_-]\\(.\\)", "\\u\\1", "g")
         let className = substitute(className, "^.*", "\\u&", "g")
         if(exists("*Headers") != 0)
             call Headers()
