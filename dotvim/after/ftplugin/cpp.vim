@@ -1,5 +1,5 @@
-set foldnestmax=2
-set foldlevelstart=1
+set foldnestmax=1
+set foldcolumn=1
 
 if(exists("*SplitHeaderPP") == 0)
     function SplitHeaderPP()

@@ -25,13 +25,10 @@ highlight CursorLine cterm=bold ctermbg=None
 highlight Folded cterm=None ctermfg=White ctermbg=none
 
 highlight FoldColumn cterm=none ctermfg=Grey ctermbg=None
-set foldcolumn=1
 
 highlight Pmenu cterm=None ctermfg=White ctermbg=Magenta
 
-set foldcolumn=1
-
-highlight foldcolumn cterm=None ctermfg=White ctermbg=none
+set foldlevelstart=99
 
 " highlight DiffAdd cterm=Bold ctermfg=Blue ctermbg=Black
 " highlight DiffChange cterm=Bold ctermfg=Magenta ctermbg=Black
