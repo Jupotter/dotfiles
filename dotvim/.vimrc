@@ -18,6 +18,9 @@ set smartcase " override 'ignorecase' when pattern has upper case characters
 set hlsearch " highlight all matches for the last used search pattern
 set incsearch " show match for partly typed search command
 
+set display+=lastline
+
+
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
@@ -159,6 +162,23 @@ set autowrite " automatically write a file when leaving a modified buffer
 set autoread " automatically read a file when it was modified outside of Vim
 
 " 19 the swap file ------------------------------------------------------------
+
+let s:dir = has('win32') ? '~/Application Data/Vim' : match(system('uname'), "Darwin") > -1 ? '~/Library/Vim' : '~/.local/share/vim'
+if isdirectory(expand(s:dir))
+    if &directory =~# '^\.,'
+        let &directory = expand(s:dir) . '/swap//,' . &directory
+    endif
+    if &backupdir =~# '^\.,'
+        let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+    endif
+    if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+        let &undodir = expand(s:dir) . '/undo//,' . &undodir
+    endif
+endif
+if exists('+undofile')
+    set undofile
+endif
+
 " 20 command line editing -----------------------------------------------------
 
 set wildmode=full " specifies how command line completion works
