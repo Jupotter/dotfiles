@@ -44,6 +44,8 @@ set laststatus=2
 " set statusline+=%l/%L   "cursor line/total lines
 " set statusline+=\ %P    "percent through file
 
+set backspace=indent,eol,start
+
 set wildmenu
 set wildmode=full
 set showcmd             " Show (partial) command in status line.
@@ -54,6 +56,7 @@ set hlsearch
 set incsearch           " Incremental search
 set gdefault
 set autowrite
+set autoread
 set hidden              " Hide buffers when they are abandoned
 set mouse=a             " Enable mouse usage (all modes)
 set ruler
@@ -65,6 +68,7 @@ set autochdir
 
 set tabstop=8
 set shiftwidth=4
+set shiftround
 set softtabstop=4
 set expandtab
 
@@ -80,6 +84,24 @@ set magic
 set scrolloff=10
 
 set tags+=~/.vim/tags/stdlibcpp
+
+set display+=lastline
+
+let s:dir = has('win32') ? '~/Application Data/Vim' : match(system('uname'), "Darwin") > -1 ? '~/Library/Vim' : '~/.local/share/vim'
+if isdirectory(expand(s:dir))
+    if &directory =~# '^\.,'
+        let &directory = expand(s:dir) . '/swap//,' . &directory
+    endif
+    if &backupdir =~# '^\.,'
+        let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+    endif
+    if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+        let &undodir = expand(s:dir) . '/undo//,' . &undodir
+    endif
+endif
+if exists('+undofile')
+    set undofile
+endif
 
 nnoremap <silent> j gj
 nnoremap <silent> k gk
@@ -131,11 +153,11 @@ inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 autocmd vimenter * if !argc() | NERDTree | endif
 
 let g:syntastic_auto_loc_list=1
-let g:syntastic_c_compiler_options = ' -W -Wall -Werror -Wextra -std=c99 -pedantic'
+"let g:syntastic_c_compiler_options = ' -W -Wall -Werror -Wextra -std=c99 -pedantic'
 "let g:syntastic_c_no_include_search = 1
 let g:syntastic_c_check_header=1
 let g:syntastic_cpp_check_header=1
-let g:syntastic_cpp_compiler_options = ' -W -Wall -Werror -Wextra -std=c++0x -pedantic'
+"let g:syntastic_cpp_compiler_options = ' -W -Wall -Werror -Wextra -std=c++0x -pedantic'
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_sign=1
 
