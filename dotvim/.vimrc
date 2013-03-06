@@ -8,6 +8,7 @@ endif
 set nocompatible " behave very Vi compatible (not advisable)
 call pathogen#infect()
 set t_Co=256
+let mapleader = ","
 
 "  2 moving around, searching and patterns ------------------------------------
 
@@ -195,6 +196,7 @@ set shell=/bin/bash " name of the shell program used for external commands
 set gdefault " use the 'g' flag for ":substitute"
 set hidden              " Hide buffers when they are abandoned
 
+let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_auto_loc_list=1
 "let g:syntastic_c_compiler_options = ' -W -Wall -Werror -Wextra -std=c99 -pedantic'
 "let g:syntastic_c_no_include_search = 1
