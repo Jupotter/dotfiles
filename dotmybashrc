@@ -57,6 +57,7 @@ mybin="~/.bin:"
 export PATH="${mybin}${PATH#$mybin}"
 export PATHSET=""
 export HISTCONTROL=ignoreboth
+export HISTSIZE=10000
 export NETHACKOPTIONS=""
 export EDITOR="vim"
 export PAGER=less
@@ -188,7 +189,7 @@ alias ll='ls -lh --color'
 alias lll='m ls -lh --color'
 alias la='ls -lah --color'
 alias lal='m ls -lah --color'
-alias tree='tree -Csup'
+alias tree='tree -Csup --charset=utf8'
 alias treel='m tree -Csup'
 
 function mkcd {
