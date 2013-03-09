@@ -72,9 +72,9 @@ fi
 
 export NNTPSERVER='news.epita.fr'
 
-export CFLAGS='-Wextra -Wall -Werror -std=c99 -pedantic'
+export MCFLAGS='-Wextra -Wall -Werror -std=c99 -pedantic'
 
-export CXXFLAGS='-Wextra -Wall -Werror'
+export MCXXFLAGS='-Wextra -Wall -Werror'
 
 export SCFLAGS='-Wall -Wextra -std=c99 -pedantic \
 -Wfloat-equal -Wundef -Wshadow -Wpointer-arith \
