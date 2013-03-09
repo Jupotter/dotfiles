@@ -22,3 +22,6 @@
 [submodule "dotvim/bundle/vim-surround"]
 	path = dotvim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "dotvim/bundle/gitgutter"]
+	path = dotvim/bundle/gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
