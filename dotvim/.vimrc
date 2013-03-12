@@ -152,6 +152,7 @@ inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 
 autocmd vimenter * if !argc() | NERDTree | endif
 
+let g:syntastic_mode_map={ 'mode': 'passive' }
 let g:syntastic_auto_loc_list=1
 "let g:syntastic_c_compiler_options = ' -W -Wall -Werror -Wextra -std=c99 -pedantic'
 "let g:syntastic_c_no_include_search = 1
@@ -163,6 +164,10 @@ let g:syntastic_enable_sign=1
 
 let g:Powerline_symbols = 'fancy'
 call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+
+highlight SignColumn ctermbg=none
+
+command SudoSave execute "w !sudo tee > /dev/null %"
 
 "let OmniCpp_ShowPrototypeInAbbr = 1
 
