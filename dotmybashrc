@@ -2,7 +2,7 @@
 #see http://tldp.org/LDP/abs/html/sample-bashrc.html for more
 
 #if [ -f /etc/bashrc ]; then
-#	. /etc/bashrc
+#       . /etc/bashrc
 #fi
 
 shopt -s histappend
@@ -67,7 +67,6 @@ export LESS='-i -w -J -z-4 -g -M -X -F -R -P%t?f%f \
 
 if command -v vimpager >/dev/null 2>&1; then
     export PAGER=vimpager
-    alias less=vimpager
 fi
 
 export NNTPSERVER='news.epita.fr'
@@ -90,17 +89,17 @@ alias valgrind='valgrind -v --leak-check=full --show-reachable=yes \
     --track-fds=yes --track-origins=yes --malloc-fill=42 --free-fill=43'
 
 function m {
-	$@ | less
+        $@ | less
 }
 
 function silence {
-	$@ > /dev/null 2>/dev/null;
+        $@ > /dev/null 2>/dev/null;
 }
 
 function genpasswd() {
-	local l=$1
-		[ "$1" == "" ] && l=16
-		tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
+        local l=$1
+                [ "$1" == "" ] && l=16
+                tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
 }
 
 
@@ -193,7 +192,7 @@ alias tree='tree -Csup --charset=utf8'
 alias treel='m tree -Csup'
 
 function mkcd {
-	mkdir $1 && cd $1
+        mkdir $1 && cd $1
 }
 
 function firefox() { command firefox "$@" & }
