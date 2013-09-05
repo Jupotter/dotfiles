@@ -25,3 +25,6 @@
 [submodule "dotvim/bundle/gitgutter"]
 	path = dotvim/bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "dotvim/bundle/undotree"]
+	path = dotvim/bundle/undotree
+	url = git@github.com:mbbill/undotree.git
