@@ -111,6 +111,14 @@ color(){
     echo "\\e[38;5;$1m\\e[48;5;$2m"
 }
 
+sucolor(){
+    if [[ $EUID -ne 0 ]]; then
+        echo "\\e[38;5;$1m\\e[48;5;$2m"
+    else
+        echo "\\e[38;5;0m\\e[48;5;196m"
+    fi
+}
+
 prompt_powerline_status(){
     if [ $1 -eq 0 ]; then
         echo -e "\\e[0m\\e[38;5;$2m\0342\0256\0200"
@@ -138,8 +146,9 @@ PS1="\n\[$bldwht\]\
 \342\224\224\342\224\200(\[$bldgrn\]\u\[$bldwht\])\342\224\200\$\[$txtrst\] "
 ;;
     power | 2)
+        if [[ $EUID -ne 0 ]]; then ucolor=148; else ucolor=196; fi
 PS1="\n\
-\[$(color 0 148) \u $(color 148 240)\342\256\200\
+\[$(color 0 $ucolor) \u $(color $ucolor 240)\342\256\200\
 \[\e[1;37m$(color 231 240) \w\e[0m$(color 231 240) \
 \$(prompt_powerline_status \$ret 240)\]\n\
 \[$bldwht\] \$ \[$txtrst\]"
@@ -148,7 +157,11 @@ esac
 PROMPT_COMMAND=prompt_command
 }
 
-prompt power
+if [[ $TERM = 'screen-256color' ]]; then
+    prompt power
+else
+    prompt classic
+fi
 
 alias AUTHORS="echo '* garagn_j' > AUTHORS"
 alias cd..='cd ..'

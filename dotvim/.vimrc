@@ -7,7 +7,7 @@ endif
 
 set nocompatible " behave very Vi compatible (not advisable)
 call pathogen#infect()
-set t_Co=256
+" set t_Co=256
 let mapleader = ","
 
 "  2 moving around, searching and patterns ------------------------------------
@@ -85,7 +85,12 @@ set laststatus=2 " 0, 1 or 2; when to use a status line for the last window ---
 
 nnoremap <SPACE> <C-w>
 
-let g:Powerline_symbols = 'fancy'
+if $TERM == "screen-256color"
+    let g:Powerline_symbols = 'fancy'
+else
+    let g:Powerline_symbols = 'unicode'
+endif
+
 call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " set statusline=%t
@@ -99,7 +104,7 @@ call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 "  8 terminal -----------------------------------------------------------------
 "  9 using the mouse ----------------------------------------------------------
 
-set mouse=a             " Enable mouse usage (all modes)
+set mouse=nv             " Enable mouse usage (Not Insert because of touchpad)
 
 " 10 printing -----------------------------------------------------------------
 " 11 messages and info --------------------------------------------------------
@@ -137,7 +142,7 @@ set shiftwidth=4 " number of spaces used for each step of (auto)indent
 set smarttab " a <Tab> in an indent inserts 'shiftwidth' spaces
 set softtabstop=4 " if non-zero, number of spaces to insert for a <Tab>
 set shiftround " round to 'shiftwidth' for "<<" and ">>"
-set expandtab " expand <Tab> to spaces in Insert mode
+set noexpandtab " expand <Tab> to spaces in Insert mode
 set autoindent " automatically set the indent of a new line
 set smartindent " do clever autoindenting
 

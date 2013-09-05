@@ -20,3 +20,5 @@
 	templatedir = ~/.git_template
 [help]
 	autocorrect = 1
+[core]
+	autocrlf = input
