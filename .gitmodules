@@ -28,3 +28,6 @@
 [submodule "dotvim/bundle/undotree"]
 	path = dotvim/bundle/undotree
 	url = git@github.com:mbbill/undotree.git
+[submodule "dotvim/bundle/bufferline"]
+	path = dotvim/bundle/bufferline
+	url = git@github.com:bling/vim-bufferline.git

@@ -215,6 +215,8 @@ highlight SignColumn ctermbg=none
 
 command SudoSave execute "w !sudo tee > /dev/null %"
 
+nnoremap <ctrl-u> UndotreeToggle
+
 "let OmniCpp_ShowPrototypeInAbbr = 1
 
 set shell=/bin/bash
