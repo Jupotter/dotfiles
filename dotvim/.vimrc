@@ -109,6 +109,10 @@ let g:airline#extensions#whitespace#enabled = 1
 " set statusline+=\ %P    "percent through file
 
 "  7 multiple tab pages -------------------------------------------------------
+
+let g:airline#extensions#tabline#enabled = 1
+set switchbuf=useopen,usetab
+
 "  8 terminal -----------------------------------------------------------------
 "  9 using the mouse ----------------------------------------------------------
 
