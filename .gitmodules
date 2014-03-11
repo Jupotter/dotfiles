@@ -31,3 +31,9 @@
 [submodule "dotvim/bundle/bufferline"]
 	path = dotvim/bundle/bufferline
 	url = git@github.com:bling/vim-bufferline.git
+[submodule "dotvim/bundle/airline"]
+	path = dotvim/bundle/airline
+	url = git@github.com:bling/vim-airline.git
+[submodule "dotvim/bundle/vim-solarized"]
+	path = dotvim/bundle/vim-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git

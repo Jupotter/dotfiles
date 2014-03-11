@@ -46,6 +46,7 @@ set wrap " long lines wrap
 set linebreak " wrap long lines at a character in 'breakat'
 set scrolloff=10 " long lines wrap
 set relativenumber " show the relative line number for each line
+set number " show the current line number too
 
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -76,6 +77,7 @@ highlight FoldColumn cterm=none ctermfg=Grey ctermbg=None
 highlight Pmenu cterm=None ctermfg=White ctermbg=Magenta
 
 highlight ExtraWhitespace ctermbg=red guibg=red
+
 match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * redraw!
 
@@ -91,7 +93,13 @@ else
     let g:Powerline_symbols = 'unicode'
 endif
 
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#bufferline#enabled = 1
+
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+
+" call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " set statusline=%t
 " set statusline+=%(\ [%M%R%Y]%)
@@ -133,7 +141,7 @@ function! SuperCleverTab()
     endif
 endfunction
 
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+" inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 
 " 14 tabs and indenting -------------------------------------------------------
 
@@ -142,7 +150,7 @@ set shiftwidth=4 " number of spaces used for each step of (auto)indent
 set smarttab " a <Tab> in an indent inserts 'shiftwidth' spaces
 set softtabstop=4 " if non-zero, number of spaces to insert for a <Tab>
 set shiftround " round to 'shiftwidth' for "<<" and ">>"
-set noexpandtab " expand <Tab> to spaces in Insert mode
+set expandtab " expand <Tab> to spaces in Insert mode
 set autoindent " automatically set the indent of a new line
 set smartindent " do clever autoindenting
 
@@ -211,11 +219,15 @@ let g:syntastic_cpp_check_header=1
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_sign=1
 
+let g:bufferline_active_buffer_left = '('
+let g:bufferline_active_buffer_right = ')'
+
+
 highlight SignColumn ctermbg=none
 
 command SudoSave execute "w !sudo tee > /dev/null %"
 
-nnoremap <ctrl-u> UndotreeToggle
+noremap <C-u> :UndotreeToggle<cr>
 
 "let OmniCpp_ShowPrototypeInAbbr = 1
 
