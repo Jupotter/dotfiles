@@ -37,3 +37,6 @@
 [submodule "dotvim/bundle/vim-solarized"]
 	path = dotvim/bundle/vim-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "dotvim/bundle/tabline"]
+	path = dotvim/bundle/tabline
+	url = git://github.com/mkitt/tabline.vim.git
