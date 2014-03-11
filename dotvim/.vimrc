@@ -235,8 +235,6 @@ noremap <C-u> :UndotreeToggle<cr>
 
 "let OmniCpp_ShowPrototypeInAbbr = 1
 
-set shell=/bin/bash
-
 source ~/.vim/autotags.vim
 nnoremap ; :
 nnoremap <F8> :TagbarToggle<CR>
