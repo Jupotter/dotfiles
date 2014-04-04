@@ -1,0 +1,3 @@
+#! /bin/sh
+
+setxkbmap -print -v 10 | grep layout | rev | cut -f1 -d\  | rev

@@ -1,0 +1,11 @@
+#! /bin/sh
+
+curmap=`${HOME}/.bin/viewxkbmap`
+
+if [ "$curmap" = "us" ]; then
+    setxkbmap us_intl;
+    echo us_intl
+else
+    setxkbmap us;
+    echo us
+fi
