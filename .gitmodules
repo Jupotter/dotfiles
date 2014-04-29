@@ -15,10 +15,10 @@
 	url = git://github.com/godlygeek/tabular.git
 [submodule "tmux-powerline"]
 	path = tmux-powerline
-	url = git@github.com:Jupotter/tmux-powerline.git
+	url = git://github.com/Jupotter/tmux-powerline.git
 [submodule "dotvim/bundle/vim-omnicppcomplete"]
 	path = vim/bundle/vim-omnicppcomplete
-	url = git@github.com:vim-scripts/OmniCppComplete.git
+	url = git://github.com/vim-scripts/OmniCppComplete.git
 [submodule "dotvim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
@@ -27,16 +27,19 @@
 	url = git://github.com/airblade/vim-gitgutter.git
 [submodule "dotvim/bundle/undotree"]
 	path = vim/bundle/undotree
-	url = git@github.com:mbbill/undotree.git
+	url = git://github.com/mbbill/undotree.git
 [submodule "dotvim/bundle/bufferline"]
 	path = vim/bundle/bufferline
-	url = git@github.com:bling/vim-bufferline.git
+	url = git://github.com/bling/vim-bufferline.git
 [submodule "dotvim/bundle/airline"]
 	path = vim/bundle/airline
-	url = git@github.com:bling/vim-airline.git
+	url = git://github.com/bling/vim-airline.git
 [submodule "dotvim/bundle/vim-solarized"]
 	path = vim/bundle/vim-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/unite.vim"]
 	path = vim/bundle/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
+[submodule "vim/bundle/vim-systemd-syntax"]
+        path = vim/bundle/vim-systemd-syntax
+        url=https://github.com/sdkell2/vim-systemd-syntax.git
