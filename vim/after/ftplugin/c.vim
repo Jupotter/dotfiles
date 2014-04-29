@@ -1,14 +1,8 @@
-set colorcolumn=+1
 set comments=sl:/*,m:**,elx:*/
 
 :let g:load_doxygen_syntax=1
 
-set list
-set listchars=tab:\>⋅,trail:⋅,eol:¬,nbsp:⋅
-set foldlevelstart=99
-set foldmethod=syntax
-set foldnestmax=1
-set foldcolumn=1
+runtime! ftplugin/code.vim
 
 set cindent
 
