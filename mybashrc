@@ -137,18 +137,18 @@ ret=$?
 function prompt(){
 case $1 in
     light | 0)
-PS1="\[$bldgrn\]\u@\H\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]$ ";;
+PS1="\[$bldgrn\]\u@\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]$ ";;
     classic | 1)
 PS1="\n\[$bldwht\]\
 \342\224\214(\[$bldblu\]\w\[$bldwht\])\
 \342\224\200(\[$bldred\]\$?\[$bldwht\])\
 \$(__git_ps1 \"\342\224\200(\[$bldblu\]%s\[$bldwht\])\")\n\
-\342\224\224\342\224\200(\[$bldgrn\]\u@\H\[$bldwht\])\342\224\200\$\[$txtrst\] "
+\342\224\224\342\224\200(\[$bldgrn\]\u@\h\[$bldwht\])\342\224\200\$\[$txtrst\] "
 ;;
     power | 2)
         if [[ $EUID -ne 0 ]]; then ucolor=148; else ucolor=196; fi
 PS1="\n\
-\[$(color 0 $ucolor) \u@\H $(color $ucolor 240)\342\256\200\
+\[$(color 0 $ucolor) \u@\h $(color $ucolor 240)\342\256\200\
 \[\e[1;37m$(color 231 240) \w\e[0m$(color 231 240) \
 \$(prompt_powerline_status \$ret 240)\]\n\
 \[$bldwht\] \$ \[$txtrst\]"
