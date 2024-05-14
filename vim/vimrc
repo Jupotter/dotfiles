@@ -25,20 +25,7 @@ set display+=lastline
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 
-inoremap <UP> <nop>
-inoremap <DOWN> <nop>
-inoremap <LEFT> <nop>
-inoremap <RIGHT> <nop>
-nnoremap <UP> <nop>
-nnoremap <DOWN> <nop>
-nnoremap <LEFT> <nop>
-nnoremap <RIGHT> <nop>
-
 "  3 tags ---------------------------------------------------------------------
-
-set tags+=~/.vim/tags/stdlibcpp " list of file names to search for tags
-
-source ~/.vim/autotags.vim
 
 "  4 displaying text ----------------------------------------------------------
 
@@ -87,18 +74,6 @@ set laststatus=2 " 0, 1 or 2; when to use a status line for the last window ---
 
 nnoremap <SPACE> <C-w>
 
-if $TERM == "screen-256color"
-    let g:Powerline_symbols = 'fancy'
-else
-    let g:Powerline_symbols = 'unicode'
-endif
-
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#bufferline#enabled = 1
-
-let g:airline#extensions#hunks#enabled = 1
-let g:airline#extensions#whitespace#enabled = 1
-
 " call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
 " set statusline=%t
@@ -110,7 +85,7 @@ let g:airline#extensions#whitespace#enabled = 1
 
 "  7 multiple tab pages -------------------------------------------------------
 
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 set switchbuf=useopen,usetab
 
 "  8 terminal -----------------------------------------------------------------
@@ -184,17 +159,32 @@ set autoread " automatically read a file when it was modified outside of Vim
 let s:dir = has('win32') ? '~/Application Data/Vim' : match(system('uname'), "Darwin") > -1 ? '~/Library/Vim' : '~/.local/share/vim'
 if isdirectory(expand(s:dir))
     if &directory =~# '^\.,'
-        let &directory = expand(s:dir) . '/swap//,' . &directory
+        let s:swapdir = expand(s:dir) . '/swap/'
+        if !isdirectory(s:swapdir)
+            call mkdir(expand(s:swapdir), p, 700)
+        endif
+
+        let &directory = expand(s:swapdir) . '/,' . &directory
     endif
     if &backupdir =~# '^\.,'
-        let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+        let s:backupdir = expand(s:dir) . '/backup/'
+        if !isdirectory(s:backupdir)
+            call mkdir(expand(s:backupdir), p, 700)
+        endif
+
+        let &backupdir = expand(s:backupdir) . '/,' . &backupdir
     endif
     if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-        let &undodir = expand(s:dir) . '/undo//,' . &undodir
+        let s:undodir = expand(s:dir) . '/undo/'
+        if !isdirectory(s:undodir)
+            call mkdir(expand(s:undodir), p, 700)
+        endif
+
+        let &undodir = expand(s:undodir) . '/,' . &undodir
+        set undofile
     endif
-endif
-if exists('+undofile')
-    set undofile
+else
+    echo "Could not find the application directory: ". expand(s:dir)
 endif
 
 " 20 command line editing -----------------------------------------------------
@@ -204,7 +194,7 @@ set wildmenu " command-line completion shows a list of matches
 
 " 21 executing external commands ----------------------------------------------
 
-set shell=/bin/bash " name of the shell program used for external commands
+set shell=/bin/pwsh " name of the shell program used for external commands
 
 " 22 running make and jumping to errors ---------------------------------------
 " 23 language specific --------------------------------------------------------
@@ -235,8 +225,6 @@ noremap <C-u> :UndotreeToggle<cr>
 
 "let OmniCpp_ShowPrototypeInAbbr = 1
 
-source ~/.vim/autotags.vim
 nnoremap ; :
-nnoremap <F8> :TagbarToggle<CR>
 
 " vim:ts=8:sts=4:sw=4:et
