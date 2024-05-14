@@ -1,0 +1,19 @@
+format = """
+$username\
+$directory\
+$shell\
+$all\
+"""
+
+[hostname]
+disabled=true
+
+[git_branch]
+truncation_length=20
+
+[java]
+detect_extensions=['java', 'class', 'gradle', 'cljs', 'cljc']
+
+[shell]
+disabled=false
+format='with [$indicator]($style) '
